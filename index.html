@@ -22,18 +22,30 @@
           <h2>Stack</h2>
           <div class="form-group">
             <label for=""></label>
-            <input class="form-control" id="stack-input" placeholder="Add element to the stack" />
+            <input
+              class="form-control"
+              id="stack-input"
+              placeholder="Add element to the stack"
+            />
           </div>
-          <button id="add-stack" type="button" class="btn btn-primary btn-block">
+          <button
+            id="add-stack"
+            type="button"
+            class="btn btn-primary btn-block"
+          >
             Add to stack
           </button>
-          <button id="take-stack" type="button" class="btn btn-danger btn-block">
+          <button
+            id="take-stack"
+            type="button"
+            class="btn btn-danger btn-block"
+          >
             Remove from stack
           </button>
           <div class="stack-container" id="stack-container">
-            <div class="warning-top alert alert-danger"></div>
+            <div class="warning-top alert alert-danger">stack Overflow</div>
             <ul id="stack-list" class="list-stack"></ul>
-            <div class="warning-bottom alert alert-danger"></div>
+            <div class="warning-bottom alert alert-danger">stack Underflow</div>
           </div>
         </div>
         <div class="col-sm-1"></div>
@@ -42,19 +54,31 @@
           <h2>Queue</h2>
           <div class="form-group">
             <label for=""></label>
-            <input class="form-control queue-input" id="queue-input" placeholder="Add element to the queue" />
+            <input
+              class="form-control queue-input"
+              id="queue-input"
+              placeholder="Add element to the queue"
+            />
           </div>
-          <button id="add-queue" type="button" class="btn btn-primary btn-block btn-add-queue">
+          <button
+            id="add-queue"
+            type="button"
+            class="btn btn-primary btn-block btn-add-queue"
+          >
             Add to queue
           </button>
-          <button id="take-queue" type="button" class="btn btn-danger btn-block btn-take-dequeue">
+          <button
+            id="take-queue"
+            type="button"
+            class="btn btn-danger btn-block btn-take-dequeue"
+          >
             Remove from queue
           </button>
 
           <div class="stack-container" id="queue-container">
-            <div class="warning-top alert alert-danger"></div>
+            <div class="warning-top alert alert-danger">queue Overflow</div>
             <ul id="queue-list" class="list-queue"></ul>
-            <div class="warning-bottom alert alert-danger"></div>
+            <div class="warning-bottom alert alert-danger">queue Underflow</div>
           </div>
         </div>
       </div>

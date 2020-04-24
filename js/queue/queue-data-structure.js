@@ -5,22 +5,42 @@ class QueueDataStructure {
   }
 
   display() {
-    // ... your code goes here
+    return this.queueControl;
   }
 
   canEnqueue() {
-    // ... your code goes here
+    //with this (if) we are checking the Queue overflow.
+    if (this.queueControl.length >= this.MAX_SIZE) {
+      return false;
+    } else {
+      return true; //is true is QueueOverflow!!
+    }
   }
 
   isEmpty() {
-    // ... your code goes here
+    // with this if statement we are checking the stack underflow.
+    if (this.queueControl.length === 0) {
+      //array length
+      return true; //is true is Queue Underflow!
+    } else {
+      return false;
+    }
   }
 
-  enqueue(item) {
-    // ... your code goes here
+  enqueue(element) {
+    if (this.canEnqueue()) {
+      this.queueControl.unshift(element);
+      return this.queueControl;
+    } else {
+      return "Queue Overflow";
+    }
   }
 
   dequeue() {
-    // ... your code goes here
+    if (this.isEmpty()) {
+      return "Queue Underflow";
+    } else {
+      return this.queueControl.pop();
+    }
   }
 }

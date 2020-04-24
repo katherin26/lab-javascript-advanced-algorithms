@@ -5,22 +5,41 @@ class StackDataStructure {
   }
 
   canPush() {
-    // ... your code goes here
+    //with this (if) we are checking the stack overflow.
+    if (this.stackControl.length >= this.MAX_SIZE) {
+      return false;
+    } else {
+      return true; // is true is "stack overflow"
+    }
   }
 
   display() {
-    // ... your code goes here
+    return this.stackControl; // This have all the object! and we can use it in stack-dom!.
   }
 
   isEmpty() {
-    // ... your code goes here
+    // with this if statement we are checking the stack underflow.
+    if (this.stackControl.length === 0) {
+      return true; // is true is "Underflow".
+    } else {
+      return false; // is not Empty!
+    }
   }
 
-  push(item) {
-    // ... your code goes here
+  push(element) {
+    if (this.canPush()) {
+      this.stackControl.push(element);
+      return this.stackControl;
+    } else {
+      return "Stack Overflow";
+    }
   }
 
   pop() {
-    // ... your code goes here
+    if (this.isEmpty()) {
+      return "Stack Underflow";
+    } else {
+      return this.stackControl.pop();
+    }
   }
 }
